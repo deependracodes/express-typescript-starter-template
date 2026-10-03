@@ -1,17 +1,12 @@
-// This file contains all the basic configuration logic for the app server to work
-import dotenv from 'dotenv';
+// This file contains all the basic configuration for the project. You can add more configurations as needed.
+
+import dotenv from "dotenv";
+dotenv.config();
 
 type ServerConfig = {
-    PORT: number
-}
-
-function loadEnv() {
-    dotenv.config();
-    console.log(`Environment variables loaded`);
-}
-
-loadEnv();
+  PORT: number;
+};
 
 export const serverConfig: ServerConfig = {
-    PORT: Number(process.env.PORT) || 3001
+  PORT: Number(process.env.PORT) || 3000,
 };
